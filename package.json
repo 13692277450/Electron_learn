@@ -1,0 +1,23 @@
+{
+  "name": "demo01",
+  "version": "1.0.0",
+  "description": "Electron learn",
+  "keywords": [
+    "86"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "Electron_Learn"
+  },
+  "license": "MIT",
+  "author": "Mang Zhang",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^42.4.1",
+    "nodemon": "^3.1.14"
+  }
+}
