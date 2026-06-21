@@ -1,5 +1,16 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const fs = require("fs");
+
+function writefile(event, data) {
+  fs.writeFileSync("d:/hello.txt", data);
+}
+ipcMain.on("savefile", writefile);
+
+function readfile() {
+  return fs.readFileSync("d:/hello.txt").toString();
+}
+ipcMain.handle("readfile", readfile);
 
 function createWindow() {
   const win = new BrowserWindow({
